@@ -21,7 +21,6 @@
 		"build": "tsup",
 		"coverage": "vitest run --coverage",
 		"prepare": "npm run build",
-		"release": "np",
 		"test": "xo && vitest run"
 	},
 	"files": [
@@ -51,7 +50,6 @@
 		"eslint-plugin-testing-library": "^6.0.0",
 		"jsdom": "latest",
 		"next-router-mock": "^0.9.9",
-		"np": "^8.0.4",
 		"tsup": "^7.2.0",
 		"typescript": "^5.1.6",
 		"vitest": "^0.34.2",
