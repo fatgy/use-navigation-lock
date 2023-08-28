@@ -1,0 +1,83 @@
+{
+	"name": "@fatgy/use-navigation-lock",
+	"version": "0.0.0",
+	"description": "Navigation lock for next.js",
+	"license": "MIT",
+	"repository": "fatgy/use-navigation-lock",
+	"author": {
+		"name": "Shatmongkol Amaraveja",
+		"email": "fatgygy@gmail.com"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"type": "module",
+	"exports": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"engines": {
+		"node": ">= 16"
+	},
+	"scripts": {
+		"build": "tsup",
+		"coverage": "vitest run --coverage",
+		"prepare": "npm run build",
+		"release": "np",
+		"test": "xo && vitest run"
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"next": "^13.0.0",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0"
+	},
+	"devDependencies": {
+		"@testing-library/jest-dom": "^5.16.4",
+		"@testing-library/react": "^14.0.0",
+		"@testing-library/user-event": "^14.4.3",
+		"@tsconfig/next": "^2.0.0",
+		"@types/react": "^18.2.21",
+		"@types/react-dom": "^18.2.7",
+		"@typescript-eslint/eslint-plugin": "^6.4.1",
+		"@typescript-eslint/parser": "^6.4.1",
+		"@vitejs/plugin-react": "latest",
+		"@vitest/coverage-v8": "latest",
+		"eslint-config-xo": "^0.43.1",
+		"eslint-config-xo-react": "^0.27.0",
+		"eslint-config-xo-typescript": "^1.0.1",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-testing-library": "^6.0.0",
+		"jsdom": "latest",
+		"next-router-mock": "^0.9.9",
+		"np": "^8.0.4",
+		"tsup": "^7.2.0",
+		"typescript": "^5.1.6",
+		"vitest": "^0.34.2",
+		"xo": "^0.56.0"
+	},
+	"peerDependencies": {
+		"next": "^13.0.0",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0"
+	},
+	"sideEffects": false,
+	"xo": {
+		"extends": [
+			"xo-react",
+			"xo-typescript",
+			"plugin:testing-library/react"
+		],
+		"overrides": [
+			{
+				"files": "test/index.test.ts",
+				"rules": {
+					"@typescript-eslint/no-floating-promises": "off",
+					"@typescript-eslint/no-unsafe-return": "off",
+					"@typescript-eslint/no-unsafe-call": "off"
+				}
+			}
+		]
+	}
+}
