@@ -21,7 +21,7 @@
 	"scripts": {
 		"build": "tsup",
 		"coverage": "vitest run --coverage",
-		"prepare": "npm run build",
+		"release": "release-it",
 		"test": "xo && vitest run"
 	},
 	"files": [
@@ -29,8 +29,7 @@
 	],
 	"dependencies": {
 		"next": "^13.0.0",
-		"react": "^18.0.0",
-		"react-dom": "^18.0.0"
+		"react": "^18.0.0"
 	},
 	"devDependencies": {
 		"@testing-library/jest-dom": "^5.16.4",
@@ -51,6 +50,7 @@
 		"eslint-plugin-testing-library": "^6.0.0",
 		"jsdom": "latest",
 		"next-router-mock": "^0.9.9",
+		"release-it": "^16.1.5",
 		"tsup": "^7.2.0",
 		"typescript": "^5.1.6",
 		"vitest": "^0.34.2",
@@ -58,19 +58,18 @@
 	},
 	"peerDependencies": {
 		"next": "^13.0.0",
-		"react": "^18.0.0",
-		"react-dom": "^18.0.0"
+		"react": "^18.0.0"
 	},
 	"sideEffects": false,
 	"xo": {
 		"extends": [
 			"xo-react",
-			"xo-typescript",
-			"plugin:testing-library/react"
+			"xo-typescript"
 		],
 		"overrides": [
 			{
 				"files": "test/index.test.ts",
+				"extends": "plugin:testing-library/react",
 				"rules": {
 					"@typescript-eslint/no-floating-promises": "off",
 					"@typescript-eslint/no-unsafe-return": "off",
