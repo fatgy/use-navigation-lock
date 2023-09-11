@@ -1,6 +1,6 @@
 {
 	"name": "@fatgy/use-navigation-lock",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Navigation lock for next.js",
 	"license": "MIT",
 	"repository": "fatgy/use-navigation-lock",
