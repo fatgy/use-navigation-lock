@@ -1,4 +1,3 @@
-/* eslint-disable n/file-extension-in-import */
 import react from '@vitejs/plugin-react';
 import {defineConfig} from 'vitest/config';
 
